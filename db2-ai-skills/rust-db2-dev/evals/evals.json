@@ -1,0 +1,23 @@
+{
+  "skill_name": "rust-db2-dev",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "I need to build a Rust CLI tool that connects to our company's Db2 database (hostname: db2prod.company.local, port 50000, database name INVENTORY) and fetches product information. The products table has columns: product_id (INTEGER), product_name (VARCHAR(100)), price (DECIMAL(10,2)), stock_quantity (INTEGER), last_updated (TIMESTAMP). I need to be able to list all products, search by product name, and update stock quantities. Can you create a complete Rust project for this with proper error handling?",
+      "expected_output": "Complete Rust project with Cargo.toml using ibm_db crate, connection management, Product model struct, repository with CRUD operations, CLI interface, .env configuration, and examples",
+      "files": []
+    },
+    {
+      "id": 1,
+      "prompt": "hey so i'm trying to write a rust app that needs to do batch inserts into our db2 database. we have an orders table with order_id, customer_id, order_date, total_amount, and status columns. i need to insert like 1000+ orders efficiently from a CSV file. the db is at localhost:50000, database is SALES. also need to handle transactions properly in case something fails halfway through. what's the best way to do this with rust?",
+      "expected_output": "Rust project with ibm_db batch insert implementation, CSV parsing, transaction management with rollback on error, Order model, repository pattern, and error handling",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I'm building a REST API in Rust using Actix-web that needs to connect to a Db2 database. The database has a users table (id, username, email, password_hash, created_at, is_active) and I need endpoints for user registration, login, and profile updates. The Db2 server is at 192.168.1.100:50000, database name is USERDB. I want proper connection pooling, prepared statements for security, and good error responses. Can you set up the complete project structure with the database layer, API routes, and all the necessary configuration?",
+      "expected_output": "Complete Rust web API project with Actix-web, ibm_db integration, connection manager, User repository with prepared statements, API routes for CRUD operations, proper error handling and HTTP responses, configuration management, and project structure",
+      "files": []
+    }
+  ]
+}
